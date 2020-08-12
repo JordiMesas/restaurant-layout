@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/formulario.css">
+    <title>formulario</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Reserva</h1>
+
+        <p>Una vez rellenes el formulario te llamaremos.</p>
+
+        <form name=reserva action="#" method="POST">
+            <fieldset>
+                <legend>Datos personales para reservar</legend>
+                <small>Es obligatorio poner los datos en los que aparezca un *</small>
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" name="nombre" value="" id="nombre" required autofocus>
+                    </li>
+                    <li>
+                        <label for="apellidos">Apellidos *</label>
+                        <input type="text" name="apellidos" value="" id="apellidos" required>
+                    </li>
+                    <li>
+                        <label for="telefono">Telefono *</label>
+                        <input type="tel" name="telefono" value="" id="telefono" required>
+                    </li>
+                    <li>
+                        <label for="correo">Correo electrónico </label>
+                        <input type="email" name="correo" value="" id="correo">
+                    </li>
+                </ul>
+            </fieldset>
+
+            <div>
+                <label for="privacidad">Acepto la política de privacidad</label>
+                <input type="checkbox" name="privacidad" id="privacidad" value="Acepta la política de privacidad"
+                    required>
+            </div>
+
+            <div class="envio">
+                <input type="submit" value="ENVIAR">
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

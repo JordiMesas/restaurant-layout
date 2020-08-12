@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades basicas */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px ;
+}
+
+h1{
+    font-family: 'Abril Fatface',serif;
+}
+
+h1,h2,h3, nav{
+    color: #5f9bce;
+}
+
+img{    
+    max-width: 100%;
+    border-style: outset;
+}
+
+img,button{    
+    border-radius: 5px;
+}
+
+/*menu*/
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    box-shadow: 0px 0.5px 4px #888888;    
+}
+
+nav div:first-of-type{
+    display: flex;
+    justify-content: space-around;    
+}
+
+nav > div:last-of-type{
+    display: none;
+}
+
+/*encabezado*/
+
+header div{
+    padding: 15px;
+    text-align: center;
+}
+
+header div > div{
+    padding: 5px 0;
+}
+
+header div  div button{
+    padding: 10px 20px;
+    background-color: #5f9bce;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #5f9bce;
+    cursor: pointer;
+}
+
+header div  div button:hover{
+        background-color: white;
+        color: #5f9bce;
+}
+
+/* main o contenido */
+
+#container{
+    margin: 5px;
+}
+
+main  h3{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.platos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+main section ul{
+    padding-left: 40px;
+
+}
+
+main section .platos, main section .platos ul li{
+    padding: 15px 0;
+}
+/* responsive mapa*/
+
+main section:last-of-type div div{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;    
+}
+main section:last-of-type div div iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+main section:last-of-type{    
+    margin: 30px auto;
+}
+
+/* footer*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 0.7em;
+    color: white;
+    background-color: black;
+    margin-top: 15px;
+}
+
+/* responsive tablet y pc*/
+
+@media (min-width: 575.98px) { 
+
+    /*nav*/
+    
+    nav{
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    nav div:first-of-type{
+        align-self: center;
+    }
+   
+    #lista{
+        display: block;
+    }
+
+    nav ul {
+        list-style-type: none;
+        font-weight: bold;
+        display: flex;        
+        padding: 15px;
+    }
+
+    nav li{
+        padding: 0 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #5f9acea4 ;
+    }
+
+    nav a:hover{
+        color: #377ebd ;
+    }
+
+    /*header*/
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header > div:last-of-type{
+        order: 1;
+    }
+
+    header > div:first-of-type{
+        order: 2;
+    }    
+
+ }
+
+@media (min-width: 767.98px) {
+
+    #container{
+        margin: 0 40px;
+    }
+    /* 3 columnas de la carta*/
+
+    main section:first-of-type{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main section:first-of-type .platos{
+        width: 49%;       
+    }
+    
+    /* mapa*/
+
+    main section:last-of-type{
+        max-width: 800px;
+    }
+
+}
+
+@media (min-width: 1000px){
+    main section:first-of-type .platos{
+        width: 32%;       
+    }
+}
+

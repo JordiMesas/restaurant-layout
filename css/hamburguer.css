@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hamburguer{
+    width: 25px; 
+    height: 25px;
+    margin: 0px 10px;
+    padding-top: 3px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;     
+}
+
+#hamburguer > div{
+    background-color: #5f9bce;    
+    height: 3px;   
+}
+
+@media (min-width: 575.98px){
+    #hamburguer{
+        display: none;        
+    }
+}
+
